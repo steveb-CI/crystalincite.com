@@ -26,20 +26,22 @@ Any copy change that adds a factual claim should be checked against those two fi
 
 ## Deployment (GitHub Pages)
 
-1. Create the public repo (e.g. `jonathans-crystalincite/crystalincite.com`) and push
-   this directory to `main`.
-2. Repo → Settings → Pages → Source: **Deploy from a branch**, branch `main`, folder `/`.
-3. The `CNAME` file in this repo sets the custom domain. In the Pages settings, confirm
-   `crystalincite.com` appears and enable **Enforce HTTPS** once the certificate issues.
-4. GoDaddy DNS for `crystalincite.com`:
+Deployed 2026-08-13 from `steveb-CI/crystalincite.com` (temporary home — planned
+transfer to `jonathans-crystalincite` later; a repo transfer keeps Pages and the
+custom domain intact). Pages source: branch `main`, folder `/`. The `CNAME` file
+sets the custom domain.
+
+Remaining go-live steps:
+
+1. GoDaddy DNS for `crystalincite.com` (currently points at GoDaddy forwarding):
    - Four `A` records on `@`: `185.199.108.153`, `185.199.109.153`,
      `185.199.110.153`, `185.199.111.153`
-   - One `CNAME` record: `www` → `<github-account>.github.io`
+   - One `CNAME` record: `www` → `steveb-ci.github.io`
    - Remove the GoDaddy "Launching Soon" forwarding/parking entry.
-5. After DNS propagates, verify: `curl -sSL https://crystalincite.com | grep -i "audit"`.
+2. After DNS propagates and the certificate issues, enable **Enforce HTTPS**:
+   `gh api -X PUT repos/steveb-CI/crystalincite.com/pages -F https_enforced=true`
+3. Verify: `curl -sSL https://crystalincite.com | grep -i "audit"`.
 
 ## Contact address
 
-All CTAs point at `hello@crystalincite.com`. That mailbox must exist (GoDaddy /
-Microsoft 365 mail routing) before the site goes live, or the address must be changed
-here first.
+All CTAs point at `hello@crystalincite.com` (confirmed live, 2026-08-13).
