@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crystal Incite — Answers you can audit</title>
+<meta name="description" content="Crystal Incite generates answers from evidence in your company's documents, with the whole trail auditable. Deterministic reasoning — no language model in the reasoning path.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="canonical" href="https://crystalincite.com/">
+<meta property="og:title" content="Crystal Incite — Answers you can audit">
+<meta property="og:description" content="Answers built from evidence in your documents, with the whole trail auditable.">
+<meta property="og:url" content="https://crystalincite.com/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="wordmark" href="#top" aria-label="Crystal Incite home">
+    <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
+      <polygon points="16,2 28,11 23,29 9,29 4,11" fill="none" stroke="url(#prism)" stroke-width="1.6"/>
+      <polygon points="16,2 16,17 4,11" fill="rgba(116,182,255,.18)"/>
+      <polygon points="16,2 28,11 16,17" fill="rgba(159,124,255,.22)"/>
+      <polygon points="16,17 23,29 9,29" fill="rgba(116,182,255,.10)"/>
+      <defs>
+        <linearGradient id="prism" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#74b6ff"/><stop offset="1" stop-color="#9f7cff"/>
+        </linearGradient>
+      </defs>
+    </svg>
+    <span>Crystal&nbsp;Incite</span>
+  </a>
+  <nav aria-label="Site">
+    <a href="#different">Why it's different</a>
+    <a href="#how">How it works</a>
+    <a href="#product">Product</a>
+    <a href="#company">Company</a>
+  </nav>
+  <a class="btn btn-quiet" href="mailto:hello@crystalincite.com?subject=Crystal%20Incite%20demo">Request a demo</a>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="kicker">Intelligence for your data</p>
+      <h1>Answers you can <em>audit</em>.</h1>
+      <p class="lede">Crystal Incite reads the documents your company already has and answers questions
+      about them — as claims built from evidence, with the whole trail attached.
+      If your documents don't support a claim, it doesn't make one.</p>
+      <div class="hero-actions">
+        <a class="btn btn-solid" href="mailto:hello@crystalincite.com?subject=Crystal%20Incite%20demo">Request a demo</a>
+        <a class="btn btn-ghost" href="#how">See how it works</a>
+      </div>
+    </div>
+
+    <!-- Signature: the answer that carries its trail -->
+    <figure class="trail" aria-label="Illustration of an answer with its evidence trail">
+      <figcaption class="trail-label">Illustration — every sentence is a claim, and every claim shows its evidence</figcaption>
+      <div class="trail-card">
+        <p class="trail-q"><span class="trail-q-tag">Question</span>Which allergen statement is current for the pale ale label?</p>
+        <div class="trail-a">
+          <span class="trail-a-tag">Answer</span>
+          <p>
+            <span class="claim" data-ev="ev1" tabindex="0">The current allergen statement is version 4, effective March&nbsp;2, 2026.</span>
+            <span class="claim" data-ev="ev2" tabindex="0">Version 3 was retired the same day and no label may cite it.</span>
+          </p>
+        </div>
+        <div class="trail-evidence">
+          <div class="ev" id="ev1">
+            <span class="ev-src">allergen-statement-v4.pdf · p.1</span>
+            <span class="ev-quote">"Statement v4 is effective 2026-03-02 and lists barley and wheat."</span>
+          </div>
+          <div class="ev" id="ev2">
+            <span class="ev-src">qa-change-log.xlsx · row 118</span>
+            <span class="ev-quote">"v3 retired 2026-03-02 — superseded by v4. Do not use on labels."</span>
+          </div>
+        </div>
+      </div>
+    </figure>
+  </section>
+
+  <!-- ============ WHY DIFFERENT ============ -->
+  <section class="different" id="different">
+    <div class="section-head">
+      <p class="kicker">Why it's different</p>
+      <h2>The answer isn't generated.<br>It's assembled from evidence.</h2>
+      <p class="section-lede">General-purpose AI assistants can state things that aren't true, with
+      complete confidence. Crystal Incite is built differently: reasoning is deterministic, and a
+      language model is used only to format the final response — never to decide what's
+      true.<sup class="prov" tabindex="0">◆<span class="prov-note">This is enforced in the architecture, not promised in marketing: the reasoning path calls no language model.</span></sup></p>
+    </div>
+    <div class="facts">
+      <div class="fact">
+        <h3>Grounded in your documents</h3>
+        <p>Answers come from what your company has actually written down — specs, plans, logs,
+        records. Nothing is pulled from the open internet or a model's memory.</p>
+      </div>
+      <div class="fact">
+        <h3>Deterministic reasoning</h3>
+        <p>The same question over the same documents gives the same answer. No language model sits
+        in the reasoning path, so there's nothing to guess, drift, or invent.</p>
+      </div>
+      <div class="fact">
+        <h3>The trail comes attached</h3>
+        <p>Every claim links back to the exact evidence it was built from. When someone asks
+        "how do you know?", the answer is a click, not a shrug.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="how" id="how">
+    <div class="section-head">
+      <p class="kicker">How it works</p>
+      <h2>From documents to defensible answers</h2>
+    </div>
+    <ol class="steps">
+      <li class="step">
+        <span class="step-n">1</span>
+        <h3>Connect your documents</h3>
+        <p>Crystal Incite works from the documents your team already keeps — no migration,
+        no re-writing your records into someone else's format.</p>
+      </li>
+      <li class="step">
+        <span class="step-n">2</span>
+        <h3>Evidence is extracted</h3>
+        <p>The system identifies the statements, figures, and tables inside your documents and
+        keeps a precise record of where each one came from.</p>
+      </li>
+      <li class="step">
+        <span class="step-n">3</span>
+        <h3>Claims are assembled</h3>
+        <p>When you ask a question, claims are built from that evidence by deterministic
+        reasoning — rules, not a model's intuition.</p>
+      </li>
+      <li class="step">
+        <span class="step-n">4</span>
+        <h3>The answer carries its trail</h3>
+        <p>You get a plain-language answer where every sentence can be traced back to the
+        document, page, and passage that supports it.</p>
+      </li>
+    </ol>
+    <p class="how-note">Built for work that faces auditors, inspectors, regulators, and customers —
+    where a wrong answer isn't an inconvenience, it's an event.</p>
+  </section>
+
+  <!-- ============ PRODUCT ============ -->
+  <section class="product" id="product">
+    <div class="section-head">
+      <p class="kicker">Product</p>
+      <h2>Two ways to put it to work</h2>
+    </div>
+    <div class="offers">
+      <div class="offer">
+        <h3>Crystal Incite</h3>
+        <p class="offer-form">Software as a service</p>
+        <p>Ask questions across your company's documents and get auditable answers in your
+        browser. Your documents stay yours; the evidence trail is part of every answer.</p>
+        <a class="btn btn-solid" href="mailto:hello@crystalincite.com?subject=Crystal%20Incite%20demo">Request a demo</a>
+      </div>
+      <div class="offer">
+        <h3>Crystal Incite SDK</h3>
+        <p class="offer-form">Licensed separately</p>
+        <p>A specification-first toolkit: versioned specifications, rules, and test cases that
+        define the integration contract — designed so integrations can be generated and verified
+        rather than hand-ported.</p>
+        <a class="btn btn-ghost" href="mailto:hello@crystalincite.com?subject=Crystal%20Incite%20SDK">Ask about the SDK</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPANY ============ -->
+  <section class="company" id="company">
+    <div class="company-inner">
+      <p class="kicker">Company</p>
+      <h2>CrystalIncite Labs</h2>
+      <p>We're a small, senior team that believes the next generation of business software has to
+      earn trust the old-fashioned way: by showing its work. We build one thing — software whose
+      answers can be checked — and we build it carefully.</p>
+      <a class="btn btn-solid" href="mailto:hello@crystalincite.com">Get in touch</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>© <span id="year">2026</span> CrystalIncite Labs</span>
+    <span class="footer-tag">Analyze. Reason. Understand.</span>
+  </div>
+</footer>
+
+<script src="assets/site.js" defer></script>
+</body>
+</html>
